@@ -25,7 +25,7 @@ h2.sectionTitle.sectionTitle-cards.padded-left,
 .fullSyncIndicator,
 .mediaSourceIndicator,
 .playedIndicator {
-  display: none;
+  display: none !important;
 }
 
 /* 
