@@ -20,12 +20,12 @@ h2.sectionTitle.sectionTitle-cards.padded-left,
 .btnForgotPassword,
 #loginPage h1,
 .indicator,
-.cardIndicators,
+div.cardIndicators,
 .countIndicator,
 .fullSyncIndicator,
 .mediaSourceIndicator,
 .playedIndicator {
-  display: none !important;
+  display: none;
   visibility: hidden;
 }
 
