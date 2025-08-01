@@ -26,6 +26,7 @@ h2.sectionTitle.sectionTitle-cards.padded-left,
 .mediaSourceIndicator,
 .playedIndicator {
   display: none !important;
+  visibility: hidden;
 }
 
 /* 
