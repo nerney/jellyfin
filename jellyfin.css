@@ -1,75 +1,79 @@
-/* 
-    Hide header icons
-*/
-.headerCastButton,
-.headerSyncButton {
-    display: none;
-}
+@import url("https://cdn.jsdelivr.net/gh/Druidblack/jellyfin-icon-metadata@main/public-icon.css");
+@import url("https://cdn.jsdelivr.net/gh/prayag17/Jellyfin-Icons/Font%20Awesome/light.css");
 
 /* 
-    Hide indicators on media
+    Hide things
 */
+.headerCastButton,
+.headerSyncButton,
+.guideChannelNumber,
+div.starRatingContainer,
+.headerHomeButton,
+#loginPage h1,
+h2.sectionTitle.sectionTitle-cards.padded-left,
+.layout-desktop .hide-scroll .mainDrawer,
+.layout-desktop .hideMainDrawer .mainDrawer,
+.layout-desktop .mainDrawerButton,
+.layout-desktop .headerHomeButton,
+#loginPage .raised.cancel.block.btnForgotPassword.emby-button,
+#btnResetPassword,
+.btnForgotPassword,
+#loginPage h1,
 .indicator,
+.cardIndicators,
 .countIndicator,
 .fullSyncIndicator,
 .mediaSourceIndicator,
 .playedIndicator {
-    display: none !important;
+  display: none;
 }
 
-/*
-    This module will change "My Media (small)" to be centered on the homepage.
-    This is useful to make the homepage look more balanced.
-    This can be used as a standalone module.
+/* 
+button.headerButton.headerHomeButton.barsMenuButton.headerButtonLeft.paper-icon-button-light,
+span.material-icons.home,
+    Disable carousel
 */
+@media all and (min-width: 50em) {
+  .homePage .emby-scroller {
+    margin-right: 0;
+  }
 
-#indexPage .section0 .itemsContainer.padded-left.padded-right {
-    justify-content: center !important;
-    padding-top: 15px !important;
-}
-
-/*
-    This module will remove the "Forgot Password" button from the login page.
-    This is useful if you have a third-party user management system.
-    This can be used as a standalone module.
-*/
-
-#btnResetPassword,
-.btnForgotPassword {
-    display: none !important;
-}
-
-#loginPage {
-    max-height: 450px;
-}
-
-/*
-    This module will allow you to make the sidebar static, meaning it will not scroll with the rest of the page.
-    This is a simple and effective way to make your Jellyfin instance look more modern.
-    This can be used as a standalone module.
-*/
-
-.layout-desktop .mainDrawer,
-.MuiDrawer-paperAnchorLeft {
-    left: 0 !important;
-    top: 0;
-    width: 250px !important;
-    background-color: var(--theme-sidebar-background-colour) !important;
-    z-index: 100;
-}
-
-.layout-desktop .mainDrawerButton,
-.layout-desktop .headerHomeButton {
+  .homePage .emby-scrollbuttons {
     display: none;
+  }
+
+  .homePage .itemsContainer {
+    flex-wrap: wrap;
+  }
 }
 
-.layout-desktop .libraryPage:not(#editItemMetadataPage),
-.layout-desktop #slides-container {
-    margin-left: 250px;
-    width: calc(100% - 250px);
+/* 
+    Fix scrollbars
+*/
+.emby-scrollbuttons {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  justify-content: space-between;
+  pointer-events: none;
 }
 
-.layout-desktop .hide-scroll .mainDrawer,
-.layout-desktop .hideMainDrawer .mainDrawer {
-    display: none;
+.emby-scrollbuttons-button {
+  pointer-events: initial;
+}
+
+/* 
+   Transparent Top Menu
+*/
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred {
+  background: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.noHomeButtonHeader {
+  background: none;
+  background-color: rgba(0, 0, 0, 0);
 }
